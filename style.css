@@ -1,0 +1,239 @@
+:root{
+  --color-white: #FFF;
+  --color-grey: #CCC;
+  --color-black: #222;
+  --color-purple: #62516D;
+  --color-orange: #F77A36;
+  --color-transparent: #FFF2;
+}
+
+/* GENERAL */
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body{
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+#waves{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/layered-waves-haikei\(2\).svg");
+  transition: opacity 1s;
+}
+
+/* HEADER */
+header{
+  position: fixed;
+  width: calc(250px - 2rem);
+  height: calc(100% - 2rem);
+  margin: 1rem;
+  padding: 2.5rem 1rem;
+  background-color: var(--color-transparent);
+  backdrop-filter: blur(8px);
+  outline: 1px solid #fff4;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.5rem #0008;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__avatar{
+  display: block;
+  width: 100%;
+}
+.header__avatar h1{
+  text-align: center;
+  font-size: 20px;
+  margin: 0.5rem 0;
+}
+.header__avatar p{
+  text-align: center;
+  margin: 0;
+}
+
+nav ul{
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+nav a{
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+nav a:hover{
+  background-color: var(--color-transparent);
+}
+
+.header__buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__buttons>div{
+  display: inline-block;
+  line-height: 0;
+}
+.header__buttons a{
+  margin: 0 0.25rem;
+}
+.header__cv{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-orange);
+}
+
+.header__cv:hover{
+  box-shadow: 0 0 0.5rem var(--color-orange);
+}
+
+/* MAIN */
+main{
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 0 1rem;
+}
+section{
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  height: 100vh;
+  max-height: 1080px;
+}
+section:last-child{
+  margin-bottom: 0;
+}
+section:first-child, section:last-child{
+  max-height: none;
+}
+
+/* INICIO */
+#inicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#inicio img{
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+/* PROYECTOS */
+.proy__contenedor{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 280px);
+  align-items: stretch;
+  gap: 0.75rem;
+  font-size: 14px;
+}
+.proy__contenedor article{
+  grid-column: span 2 / span 2;
+  grid-row: span 1 / span 1;
+  background-color: var(--color-purple);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem #0008;
+  display: flex;
+}
+
+.proy__info{
+  position: relative;
+  width: 60%;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+}
+.proy__img{
+  width: 40%;
+  overflow: hidden;
+  line-height: 0;
+  border-radius: 0.5rem;
+}
+
+.proy__info h3{
+  margin: 0;
+}
+.proy__img img{
+  width: 300%;
+}
+
+.proy__herramientas{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.proy__herramientas li{
+  background-color: var(--color-transparent);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.proy__hv{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 1rem);
+  display: flex;
+  justify-content: space-between;
+}
+.proy__hv a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-orange);
+}
+.proy__hv a:hover{
+  box-shadow: 0 0 0.5rem var(--color-orange);
+}
+
+/* proy article pequeño */
+.proy__peq{
+  grid-column: span 1 / span 1 !important;
+  flex-direction: column-reverse;
+}
+.proy__peq .proy__info{
+  width: 100%;
+  padding: 0;
+}
+.proy__peq .proy__img{
+  width: 100%;
+}
+.proy__peq .proy__hv{
+  width: 100%;
+}
+
+/* SOBRE MI */
+
+/* HABILIDADES */
+
+/* CONTACTO */
+
+/* MOBILES */
