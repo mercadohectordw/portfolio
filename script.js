@@ -1,5 +1,5 @@
 const mostrarYOcultarElementos = () => {
-  let element = document.querySelector('#inicio');
+  let element = document.querySelector('.ini__avatar');
   let position = element.getBoundingClientRect();
   let waves = document.getElementById('waves').style;
 

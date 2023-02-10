@@ -133,9 +133,50 @@ section:first-child, section:last-child{
   align-items: center;
   justify-content: center;
 }
+.ini__avatar{
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
 #inicio img{
-  width: 40%;
+  width: 100%;
+  max-width: 350px;
   border-radius: 50%;
+}
+
+.ini__titulo{
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-black);
+}
+.ini__titulo h2{
+  margin: 0;
+  font-size: 28px;
+}
+.ini__titulo p{
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-orange);
+}
+
+.ini__iconos{
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ini__iconos svg{
+  width: 5rem;
 }
 
 
