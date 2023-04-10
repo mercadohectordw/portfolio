@@ -39,7 +39,7 @@ body{
 /* HEADER */
 .header{
   width: 100%;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   position: fixed;
   z-index: 10;
   height: 4rem;
@@ -79,6 +79,9 @@ body{
 .menu__list-link{
   padding: 0.5rem 0;
 }
+.menu__list-link:hover{
+  color: var(--color-orange);
+}
 
 .header__links-list{
   display: flex;
@@ -87,10 +90,19 @@ body{
   gap: 0.75rem;
 }
 
+.header__mobile-button button{
+  background-color: inherit;
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.header__mobile-button, .mobile-menu{
+  display: none;
+}
 
 /* MAIN GENERAL */
 .container{
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 main{
   max-width: 1024px;
@@ -159,10 +171,11 @@ section#inicio, section#contacto{
 .proyectos__item{
   padding: 1rem;
   border-radius: 1rem;
-  background-color: var(--color-purple);
+  background-color: var(--color-transparent);
   box-shadow: 0 0.25rem 0.75rem #0005;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -191,6 +204,9 @@ section#inicio, section#contacto{
   display: flex;
   justify-content: space-between;
 }
+.proyectos__links--bottom{
+  display: none;
+}
 .proyectos__links a{
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -209,7 +225,7 @@ section#inicio, section#contacto{
 }
 .proyectos__item-images img{
   width: 100%;
-  height: 280px;
+  height: 100%;
   object-fit: cover;
   object-position: top left;
   border-radius: 0.25rem;
@@ -241,7 +257,7 @@ section#inicio, section#contacto{
   grid-column: 1 span;
   padding: 1rem 1.25rem;
   background-color: var(--color-transparent);
-  border: 1px solid var(--color-transparent);
+  box-shadow: 0 0.25rem 0.75rem #0005;
   border-radius: 1rem;
 }
 .habilidades__group h3{
@@ -273,7 +289,7 @@ section#inicio, section#contacto{
 
 /* SOBRE MI */
 .sobre-mi__description{
-  padding: 0 8rem;
+  padding: 0 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
@@ -283,6 +299,7 @@ section#inicio, section#contacto{
 .sobre-mi__avatar{
   grid-column: 1;
   width: 100%;
+  max-width: 200px;
   border-radius: 50%;
   filter: grayscale(0.5);
   box-shadow: 0 0 1rem 0.5rem #0005;
@@ -300,7 +317,7 @@ section#inicio, section#contacto{
   gap: 2rem;
 }
 .sobre-mi__studies h3{
-  margin: 0.5rem 0;
+  margin: 2rem 0 0.75rem 0;
 }
 .sobre-mi__studies-item h4,.sobre-mi__studies-item p{
   margin: 0;
@@ -324,7 +341,7 @@ section#inicio, section#contacto{
 }
 .sobre-mi__studies-item ul{
   list-style: none;
-  padding-left: 1rem;
+  padding-left: 0;
   margin: 0.5rem 0 0 0;
   color: var(--color-grey);
 }
@@ -403,4 +420,145 @@ section#inicio, section#contacto{
 }
 .contacto__button:hover{
   background-color: var(--color-orange);
+}
+
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .header__content{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .menu__list{
+    justify-content: end;
+  }
+  .header__links-list{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__mobile-button{
+    display: block;
+  }
+  .header{
+    padding: 0;
+  }
+  .header__content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .header__links-list, .menu{
+    display: none;
+  }
+  .mobile-menu__container{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    list-style: none;
+    background-color: var(--color-black);
+    border-bottom: 2px solid var(--color-transparent);
+    border-top: 1px solid var(--color-transparent);
+  }
+  .mobile-menu__list-item a{
+    display: inline-block;
+    padding: 0.75rem 0;
+  }
+
+  .proyectos__item{
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+  }
+  .proyectos__item-images{
+    height: 330px;
+  }
+  .proyectos__links{
+    display: none;
+  }
+  .proyectos__links--bottom{
+    display: flex;
+  }
+
+  .habilidades__container{
+    grid-template-columns: 1fr;
+  }
+  .habilidades__icons-list{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+    row-gap: 1rem;
+  }
+
+  .sobre-mi__description{
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+  .sobre-mi__avatar{
+    margin: 0 auto;
+  }
+  .sobre-mi__text{
+    grid-column: 1 span;
+  }
+  .sobre-mi__studies{
+    grid-template-columns: 1fr;
+  }
+
+  .contacto__container{
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+  }
+  .contacto__details-item{
+    gap: 0.25rem;
+  }
+  .contacto__form>div{
+    display: block;
+  }
+  .contacto__form label{
+    display: block;
+    width: 100%;
+  }
+  .contacto__form input, .contacto__form textarea{
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile-menu__container{
+    flex-direction: column;
+  }
+  .mobile-menu__list-item a{
+    display: block;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .container{
+    padding: 0 0;
+  }
+  .proyectos__item{
+    border-radius: 0;
+  }
+
+  .habilidades__group{
+    border-radius: 0;
+    padding: 1rem;
+  }
+  .habilidades__icons-list{
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .sobre-mi__text, .sobre-mi__studies{
+    padding: 0 1rem;
+  }
+
+  .contacto__container{
+    padding: 0 1rem;
+  }
+  .contacto__details-item{
+    font-size: 14px;
+  }
 }

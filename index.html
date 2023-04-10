@@ -50,6 +50,32 @@
           <i class="fa-brands fa-linkedin fa-2x"></i>
         </a>
       </div>
+
+      <div class="header__mobile-button">
+        <button type="button" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu" style="display: none;">
+      <ul class="mobile-menu__container">
+        <li class="mobile-menu__list-item">
+          <a href="#inicio" class="mobile-menu__list-link" onclick="toggleMobileMenu()">Inicio</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a href="#proyectos" class="mobile-menu__list-link" onclick="toggleMobileMenu()">Proyectos</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a href="#habilidades" class="mobile-menu__list-link" onclick="toggleMobileMenu()">Habilidades</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a href="#sobre-mi" class="mobile-menu__list-link" onclick="toggleMobileMenu()">Sobre Mi</a>
+        </li>
+        <li class="mobile-menu__list-item">
+          <a href="#contacto" class="mobile-menu__list-link" onclick="toggleMobileMenu()">Contacto</a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -107,9 +133,21 @@
                 </a>
               </div>
             </div>
-            <div class="proyectos__item-images">
+
+            <div class="proyectos__item-images" style="max-height: 314px;">
               <img src="assets/proyectos/Drawing Tablets.png" alt="Drawing Tablets imagen 1">
               <img src="assets/proyectos/Drawing Tablets Mobile.png" alt="Drawing Tablets image 2">
+            </div>
+
+            <div class="proyectos__links proyectos__links--bottom">
+              <a href="https://mercadohectordw.github.io/reviewer-blog/home" target="_blank">
+                <i class="fa-solid fa-globe"></i>
+                DEMO
+              </a>
+              <a href="https://github.com/mercadohectordw/reviewer-blog" target="_blank">
+                <i class="fa-solid fa-code"></i>
+                REPO
+              </a>
             </div>
           </article>
 
@@ -144,9 +182,21 @@
                 </a>
               </div>
             </div>
+
             <div class="proyectos__item-images">
-              <img src="assets/proyectos/The Reviewer Blog.png" alt="Weather App imagen 1">
+              <img src="assets/proyectos/The Reviewer Blog.png" alt="Weather App imagen 1" style="object-position: top center;">
               <img src="assets/proyectos/The Reviewer Blog Sec.png" alt="Weather App image 2">
+            </div>
+
+            <div class="proyectos__links proyectos__links--bottom">
+              <a href="https://mercadohectordw.github.io/reviewer-blog/home" target="_blank">
+                <i class="fa-solid fa-globe"></i>
+                DEMO
+              </a>
+              <a href="https://github.com/mercadohectordw/reviewer-blog" target="_blank">
+                <i class="fa-solid fa-code"></i>
+                REPO
+              </a>
             </div>
           </article>
 
@@ -178,9 +228,21 @@
                 </a>
               </div>
             </div>
-            <div class="proyectos__item-images">
+
+            <div class="proyectos__item-images" style="height: 260px;">
               <img src="assets/proyectos/Weather App.png" alt="Weather App imagen 1">
               <img src="assets/proyectos/Weather App Mobile.png" alt="Weather App image 2">
+            </div>
+            
+            <div class="proyectos__links proyectos__links--bottom">
+              <a href="https://mercadohectordw.github.io/reviewer-blog/home" target="_blank">
+                <i class="fa-solid fa-globe"></i>
+                DEMO
+              </a>
+              <a href="https://github.com/mercadohectordw/reviewer-blog" target="_blank">
+                <i class="fa-solid fa-code"></i>
+                REPO
+              </a>
             </div>
           </article>
 
@@ -193,7 +255,7 @@
                 <li>Javascript</li>
               </ul>
             </div>
-            <div class="proyectos__links">
+            <div class="proyectos__links proyectos__links--bottom" style="display: block !important;;">
               <a href="https://github.com/mercadohectordw/portfolio" target="_blank">
                 <i class="fa-solid fa-code"></i>
                 REPO
@@ -325,7 +387,7 @@
   
         <div class="sobre-mi__studies">
           <div>
-            <h3>Estudios</h3>
+            <h3>Estudios Universitarios</h3>
             <div class="sobre-mi__studies-item">
               <div class="sobre-mi__icon">
                 <img src="assets/icons/unlam-color.svg" alt="UNLaM">
