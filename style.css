@@ -130,7 +130,7 @@ section#inicio, section#contacto{
   border-color: var(--color-orange);
 }
 .section-title h2{
-  font-size: smaller;
+  font-size: 22px;
   color: var(--color-orange);
 }
 
@@ -178,6 +178,9 @@ section#inicio, section#contacto{
   align-items: stretch;
   gap: 1rem;
   margin: 2rem 0;
+}
+.proyectos__item:first-child{
+  margin-top: 1rem;
 }
 .proyectos__item-text{
   display: flex;
